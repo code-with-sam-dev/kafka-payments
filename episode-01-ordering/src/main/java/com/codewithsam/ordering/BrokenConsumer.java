@@ -9,7 +9,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 /**
- * The consumer that breaks ordering — and does it in the most reasonable-looking
+ * The consumer that breaks ordering - and does it in the most reasonable-looking
  * way possible.
  *
  * Nothing here is obviously wrong. It polls a partition, receives records in the

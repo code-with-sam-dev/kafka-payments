@@ -1,4 +1,4 @@
-<img src="assets/images/series-banner.png" alt="Kafka Payments — Code with Sam" width="100%">
+<img src="assets/images/series-banner.png" alt="Kafka Payments - Code with Sam" width="100%">
 
 <p>
   <a href="https://github.com/code-with-sam-dev/kafka-payments/actions/workflows/ci.yml">
@@ -13,7 +13,7 @@
   </a>
 </p>
 
-# Kafka Payments — build a production-grade service, one episode at a time
+# Kafka Payments - build a production-grade service, one episode at a time
 
 A payments service built incrementally across a video series. **Each episode
 adds exactly one concept to the codebase**, and every stage runs on its own.
@@ -30,10 +30,10 @@ consumer groups, retries and dead-letter handling, and full observability.
 | Stage | Episode | Adds | Status |
 |-------|---------|------|--------|
 | [`episode-01-ordering`](episode-01-ordering) | Kafka Ordering Explained | Partitions, message keys, and how consumer concurrency destroys ordering | ✅ |
-| `episode-02-…` | — | — | planned |
+| `episode-02-…` | - | - | planned |
 
 > The remaining stages are being sequenced. Episode order is chosen for search
-> demand **and** for a sensible build order — you cannot demonstrate retries and
+> demand **and** for a sensible build order - you cannot demonstrate retries and
 > dead-letter topics before consumer groups exist.
 
 ## How to use this repo
@@ -47,7 +47,7 @@ cd kafka-payments/episode-01-ordering
 docker compose up --build
 ```
 
-You need Docker. Nothing else — no Java, no Kafka, no Maven installed locally.
+You need Docker. Nothing else - no Java, no Kafka, no Maven installed locally.
 
 Each stage exposes a small REST API rather than a UI, so you can drive it with
 `curl` and keep your attention on the behaviour being demonstrated rather than
@@ -62,7 +62,7 @@ mvn test
 
 Tests run against an embedded broker, so they need neither Docker nor a
 network. CI builds and tests **every stage independently**, which means a
-change to a later episode can never silently break an earlier one — and that
+change to a later episode can never silently break an earlier one - and that
 matters, because each stage is what someone clones after watching that
 particular episode.
 
@@ -74,12 +74,12 @@ fits a real system.
 
 Here the code accumulates. By the end you have watched a service grow from a
 single producer into something with the failure handling and observability that
-production actually demands — and every intermediate state is preserved so you
+production actually demands - and every intermediate state is preserved so you
 can see exactly what each idea changed.
 
 ## More from Code with Sam
 
-Modern software engineering interview preparation for the AI era — the
+Modern software engineering interview preparation for the AI era - the
 questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 

@@ -1,4 +1,4 @@
-<img src="assets/images/banner.png" alt="Kafka Ordering — Code with Sam" width="100%">
+<img src="assets/images/banner.png" alt="Kafka Ordering - Code with Sam" width="100%">
 
 <p>
   <a href="https://github.com/code-with-sam-dev/kafka-payments/actions/workflows/ci.yml">
@@ -13,14 +13,14 @@
   </a>
 </p>
 
-> **Episode 1 of [Kafka Payments](../README.md)** — a payments service built one
+> **Episode 1 of [Kafka Payments](../README.md)** - a payments service built one
 > concept per episode. This stage introduces partitions, message keys, and the
 > way consumer concurrency destroys ordering Kafka delivered correctly.
 > Next stage: sequencing in progress.
 
 # Kafka Ordering Demo
 
-Kafka guarantees ordering — but only **within a partition**. And even then, your
+Kafka guarantees ordering - but only **within a partition**. And even then, your
 own consumer can throw that guarantee away.
 
 This repository lets you watch both happen on your machine, in about a minute.
@@ -28,7 +28,7 @@ This repository lets you watch both happen on your machine, in about a minute.
 ## Watch the explanation
 
 <a href="https://www.youtube.com/watch?v=REPLACE_WITH_VIDEO_ID">
-  <img src="assets/images/video-thumbnail.png" alt="Kafka Ordering Explained — watch on YouTube" width="640">
+  <img src="assets/images/video-thumbnail.png" alt="Kafka Ordering Explained - watch on YouTube" width="640">
 </a>
 
 **[Kafka Ordering Explained: The Mistake That Breaks Your System →](https://www.youtube.com/watch?v=REPLACE_WITH_VIDEO_ID)**
@@ -39,7 +39,7 @@ This repository lets you watch both happen on your machine, in about a minute.
 
 ## Run it
 
-You need Docker. Nothing else — no Java, no Kafka, no Maven on your machine.
+You need Docker. Nothing else - no Java, no Kafka, no Maven on your machine.
 
 ```bash
 git clone https://github.com/code-with-sam-dev/kafka-payments
@@ -110,7 +110,7 @@ public void consume(String raw) {
 }
 ```
 
-That is not slower in any way that matters. Parallelism still exists — it lives
+That is not slower in any way that matters. Parallelism still exists - it lives
 at the partition level, where Kafka intended it. Want more throughput? Add
 partitions and consumers, not threads inside one consumer.
 
@@ -140,7 +140,7 @@ properties:
 ```
 
 Without idempotence, a retried batch can be written *after* a later batch that
-succeeded — reordering records inside a partition before any consumer sees
+succeeded - reordering records inside a partition before any consumer sees
 them. Ordering lost on the producer side, and easy to miss.
 
 ## Tests
@@ -151,7 +151,7 @@ mvn test
 
 Runs against an embedded broker, so no Docker and no network are needed. The
 tests assert that the sequential consumer preserves per-key order, and that the
-broken consumer still receives everything — because that is precisely why the
+broken consumer still receives everything - because that is precisely why the
 bug survives review. Counts reconcile, logs look healthy, and the state is
 still wrong.
 
@@ -169,7 +169,7 @@ still wrong.
 
 ## More from Code with Sam
 
-Modern software engineering interview preparation for the AI era — the
+Modern software engineering interview preparation for the AI era - the
 questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 

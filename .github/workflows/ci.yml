@@ -1,5 +1,5 @@
 # Every episode stage is built and tested independently, so a change to a later
-# stage can never silently break an earlier one — which matters because each
+# stage can never silently break an earlier one - which matters because each
 # stage is what a viewer clones after watching that specific episode.
 name: tests
 

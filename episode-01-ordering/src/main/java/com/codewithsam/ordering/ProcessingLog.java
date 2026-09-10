@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * Records the order in which events were actually PROCESSED, per consumer
  * strategy, so the demo can prove what happened instead of describing it.
  *
- * Kafka's delivery order is not in question here — it is always correct. What
+ * Kafka's delivery order is not in question here - it is always correct. What
  * this captures is what the application did with that correct delivery.
  */
 @Component
@@ -46,7 +46,7 @@ public class ProcessingLog {
      * As {@link #isOrdered}, but limited to the given payment ids.
      *
      * Tests need this because both consumers subscribe to the same topic and
-     * drain at different speeds — so a test can still be seeing records from a
+     * drain at different speeds - so a test can still be seeing records from a
      * previous test's payments. Scoping the assertion to ids the caller owns is
      * real isolation; clearing shared state while async consumers are live is
      * merely a race.

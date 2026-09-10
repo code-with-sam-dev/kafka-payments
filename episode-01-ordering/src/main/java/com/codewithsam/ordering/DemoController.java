@@ -32,7 +32,7 @@ public class DemoController {
 
     /**
      * Produces the full lifecycle for N payments. Both consumers are listening,
-     * so each receives the identical, correctly-ordered stream — which is what
+     * so each receives the identical, correctly-ordered stream - which is what
      * makes the difference in their output attributable to them and not to Kafka.
      */
     @PostMapping("/demo/run")
