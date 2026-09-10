@@ -1,0 +1,10 @@
+# Normalise line endings so a clone on Windows does not produce a diff in every
+# file the moment someone opens it.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.mp3 binary
+mvnw text eol=lf
+*.bat text eol=crlf

@@ -1,0 +1,11 @@
+name: Question about the concept
+description: Something in an episode did not land
+labels: [question]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What is unclear
+      description: Which episode, and which part. If the code did something you did not expect, say what you expected.
+    validations:
+      required: true

@@ -1,0 +1,19 @@
+# Security and version updates. Grouped and monthly, because a repository that
+# opens twelve pull requests a week teaches people to ignore it.
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: /episode-01-ordering
+    schedule:
+      interval: monthly
+    groups:
+      spring:
+        patterns: ['org.springframework*']
+      test:
+        patterns: ['*junit*', '*assertj*', '*testcontainers*']
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

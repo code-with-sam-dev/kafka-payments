@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Watch the series
+    url: https://www.youtube.com/@CodewithSam-Dev
+    about: Every stage in this repository has an episode explaining it.
+  - name: Read the write-up
+    url: https://code-with-sam-dev.github.io
+    about: Longer written versions of each episode.

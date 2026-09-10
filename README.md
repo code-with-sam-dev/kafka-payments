@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Spring%20Boot-3.3-brightgreen" alt="Spring Boot 3.3">
   <img src="https://img.shields.io/badge/Kafka-KRaft-black" alt="Kafka KRaft">
   <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT licence">
-  <a href="https://www.youtube.com/@CodeWithSam">
+  <a href="https://www.youtube.com/@CodewithSam-Dev">
     <img src="https://img.shields.io/badge/YouTube-Code%20with%20Sam-red?logo=youtube&logoColor=white" alt="YouTube">
   </a>
 </p>
@@ -23,7 +23,7 @@ the thing you are trying to understand. By the last episode this is a service
 you would not be embarrassed to run: idempotent producers, per-entity ordering,
 consumer groups, retries and dead-letter handling, and full observability.
 
-**[▶ Watch the series on Code with Sam](https://www.youtube.com/@CodeWithSam)**
+**[▶ Watch the series on Code with Sam](https://www.youtube.com/@CodewithSam-Dev)**
 
 ## The stages
 
@@ -83,7 +83,7 @@ Modern software engineering interview preparation for the AI era - the
 questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 
-**[▶ Subscribe on YouTube](https://www.youtube.com/@CodeWithSam?sub_confirmation=1)**
+**[▶ Subscribe on YouTube](https://www.youtube.com/@CodewithSam-Dev?sub_confirmation=1)**
 · **[Read the articles](https://code-with-sam-dev.github.io)**
 
 If this helped, a ⭐ makes it easier for the next person to find.
