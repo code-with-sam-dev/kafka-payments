@@ -1,8 +1,8 @@
 <img src="assets/images/series-banner.png" alt="Kafka Payments — Code with Sam" width="100%">
 
 <p>
-  <a href="https://github.com/samsonnyabanga/kafka-payments/actions/workflows/ci.yml">
-    <img src="https://github.com/samsonnyabanga/kafka-payments/actions/workflows/ci.yml/badge.svg" alt="tests">
+  <a href="https://github.com/code-with-sam-dev/kafka-payments/actions/workflows/ci.yml">
+    <img src="https://github.com/code-with-sam-dev/kafka-payments/actions/workflows/ci.yml/badge.svg" alt="tests">
   </a>
   <img src="https://img.shields.io/badge/Java-21-orange" alt="Java 21">
   <img src="https://img.shields.io/badge/Spring%20Boot-3.3-brightgreen" alt="Spring Boot 3.3">
@@ -42,7 +42,7 @@ Every stage is a complete, runnable project. Nothing is left as an exercise and
 there are no `TODO` stubs.
 
 ```bash
-git clone https://github.com/samsonnyabanga/kafka-payments
+git clone https://github.com/code-with-sam-dev/kafka-payments
 cd kafka-payments/episode-01-ordering
 docker compose up --build
 ```
@@ -84,7 +84,7 @@ questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 
 **[▶ Subscribe on YouTube](https://www.youtube.com/@CodeWithSam?sub_confirmation=1)**
-· **[Read the articles](https://samsonnyabanga.github.io/codewithsam-site)**
+· **[Read the articles](https://code-with-sam-dev.github.io/codewithsam-site)**
 
 If this helped, a ⭐ makes it easier for the next person to find.
 

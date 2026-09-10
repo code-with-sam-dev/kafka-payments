@@ -1,8 +1,8 @@
 <img src="assets/images/banner.png" alt="Kafka Ordering — Code with Sam" width="100%">
 
 <p>
-  <a href="https://github.com/samsonnyabanga/kafka-ordering-demo/actions/workflows/ci.yml">
-    <img src="https://github.com/samsonnyabanga/kafka-ordering-demo/actions/workflows/ci.yml/badge.svg" alt="tests">
+  <a href="https://github.com/code-with-sam-dev/kafka-payments/actions/workflows/ci.yml">
+    <img src="https://github.com/code-with-sam-dev/kafka-payments/actions/workflows/ci.yml/badge.svg" alt="tests">
   </a>
   <img src="https://img.shields.io/badge/Java-21-orange" alt="Java 21">
   <img src="https://img.shields.io/badge/Spring%20Boot-3.3-brightgreen" alt="Spring Boot 3.3">
@@ -33,7 +33,7 @@ This repository lets you watch both happen on your machine, in about a minute.
 
 **[Kafka Ordering Explained: The Mistake That Breaks Your System →](https://www.youtube.com/watch?v=REPLACE_WITH_VIDEO_ID)**
 · 4 minutes · [Code with Sam](https://www.youtube.com/@CodeWithSam)
-· [Read the article](https://samsonnyabanga.github.io/codewithsam-site/blog/kafka-ordering-explained)
+· [Read the article](https://code-with-sam-dev.github.io/codewithsam-site/blog/kafka-ordering-explained)
 
 ---
 
@@ -42,7 +42,7 @@ This repository lets you watch both happen on your machine, in about a minute.
 You need Docker. Nothing else — no Java, no Kafka, no Maven on your machine.
 
 ```bash
-git clone https://github.com/samsonnyabanga/kafka-payments
+git clone https://github.com/code-with-sam-dev/kafka-payments
 cd kafka-payments/episode-01-ordering
 docker compose up --build
 ```
@@ -174,7 +174,7 @@ questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 
 **[▶ Subscribe on YouTube](https://www.youtube.com/@CodeWithSam?sub_confirmation=1)**
-· **[Read the articles](https://samsonnyabanga.github.io/codewithsam-site)**
+· **[Read the articles](https://code-with-sam-dev.github.io/codewithsam-site)**
 
 If this repo helped, a ⭐ makes it easier for the next person to find.
 
