@@ -33,7 +33,7 @@ This repository lets you watch both happen on your machine, in about a minute.
 
 **[Kafka Ordering Explained: The Mistake That Breaks Your System →](https://www.youtube.com/watch?v=REPLACE_WITH_VIDEO_ID)**
 · 4 minutes · [Code with Sam](https://www.youtube.com/@CodeWithSam)
-· [Read the article](https://code-with-sam-dev.github.io/codewithsam-site/blog/kafka-ordering-explained)
+· [Read the article](https://code-with-sam-dev.github.io/blog/kafka-ordering-explained)
 
 ---
 
@@ -174,7 +174,7 @@ questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 
 **[▶ Subscribe on YouTube](https://www.youtube.com/@CodeWithSam?sub_confirmation=1)**
-· **[Read the articles](https://code-with-sam-dev.github.io/codewithsam-site)**
+· **[Read the articles](https://code-with-sam-dev.github.io)**
 
 If this repo helped, a ⭐ makes it easier for the next person to find.
 

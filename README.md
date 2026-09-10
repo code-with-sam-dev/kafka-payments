@@ -84,7 +84,7 @@ questions senior backend engineers are actually asked, with a video, an
 article, and runnable code for each.
 
 **[▶ Subscribe on YouTube](https://www.youtube.com/@CodeWithSam?sub_confirmation=1)**
-· **[Read the articles](https://code-with-sam-dev.github.io/codewithsam-site)**
+· **[Read the articles](https://code-with-sam-dev.github.io)**
 
 If this helped, a ⭐ makes it easier for the next person to find.
 
