@@ -1,4 +1,4 @@
-# Everything needed to see Kafka ordering break, in one command.
+# Everything needed to see Kafka rebalancing break, in one command.
 #
 #   docker compose up --build
 #
@@ -15,13 +15,14 @@ services:
   kafka:
     image: apache/kafka:3.8.0
     ports:
-      - "29092:29092"
+      # Episode 1 uses 29092, so this one takes 29093 and they coexist.
+      - "29093:29092"
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
       KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
       KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:29092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29093
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
@@ -29,9 +30,9 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      # Three partitions: enough to show that different payments spread out
-      # while one payment's events stay together.
-      KAFKA_NUM_PARTITIONS: 3
+      # Six partitions across two consumer threads, so a revocation actually
+      # hands work to the other member rather than leaving it unowned.
+      KAFKA_NUM_PARTITIONS: 6
       CLUSTER_ID: 5L6g3nShT-eMCtK--X86sw
     healthcheck:
       test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list || exit 1"]
@@ -45,6 +46,6 @@ services:
       kafka:
         condition: service_healthy
     ports:
-      - "8080:8080"
+      - "8081:8080"
     environment:
       KAFKA_BOOTSTRAP: kafka:9092

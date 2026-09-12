@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: kafka-rebalancing-demo
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:29092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      properties:
+        # THE THREE SETTINGS THAT FORCE THE FAILURE.
+        #
+        # A short poll interval plus a large batch plus slow processing means
+        # one poll takes longer than the group will tolerate, and the member is
+        # evicted for being slow while its heartbeat thread reports it alive
+        # the whole time.
+        #
+        # NONE OF THIS IS ADVICE. These are hostile values chosen to make an
+        # eviction happen in seconds so it can be watched. In production you
+        # turn these the other way, and the design sheet says so.
+        max.poll.interval.ms: ${DEMO_MAX_POLL_INTERVAL_MS:8000}
+        max.poll.records: ${DEMO_MAX_POLL_RECORDS:100}
+        # Heartbeating stays healthy throughout, which is the entire point:
+        # the process is alive and is thrown out anyway.
+        session.timeout.ms: 45000
+        heartbeat.interval.ms: 3000
+
+demo:
+  # Milliseconds burned per record. 100 records at 120 ms is 12 seconds inside
+  # one poll, against an 8 second interval: eviction, reliably.
+  processing-millis: ${DEMO_PROCESSING_MILLIS:120}
+  concurrency: ${DEMO_CONCURRENCY:2}
+  group-id: ${DEMO_GROUP_ID:payments-demo}
+
+logging:
+  level:
+    root: WARN
+    com.codewithsam.rebalancing: INFO
+    org.apache.kafka.clients.consumer: WARN
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-7.7t %msg%n"

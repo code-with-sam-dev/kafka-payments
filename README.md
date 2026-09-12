@@ -91,3 +91,13 @@ If this helped, a ⭐ makes it easier for the next person to find.
 ## Licence
 
 MIT. Use it, fork it, take it into an interview.
+
+## Episodes
+
+| Episode | Module | What it demonstrates |
+|---|---|---|
+| 1, Ordering | `episode-01-ordering` | Kafka delivered the order. The consumer destroyed it. |
+| 3, Rebalancing | `episode-03-rebalancing` | A healthy consumer evicted for being slow, and the duplicate that follows. |
+
+Each module is self contained: its own compose file, its own ports, its own
+README. They can be run at the same time.
